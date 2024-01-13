@@ -1,0 +1,42 @@
+{
+  "name": "economy-bot",
+  "version": "0.1.0",
+  "description": "economy-bot",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b src",
+    "watch": "tsc -b src -w",
+    "start": "node --enable-source-maps dist/index.js",
+    "dev": "tsc-watch -b src --onSuccess \"node ./dist/index.js\""
+  },
+  "author": "DemonWayne",
+  "license": "Apache-2.0",
+  "imports": {
+    "#handlers/*": "./dist/lib/handlers/*.js",
+    "#controllers/*": "./dist/lib/handlers/controllers/*.js",
+    "#models/*": "./dist/lib/models/*.js",
+    "#types/*": "./dist/lib/types/*.js",
+    "#utils/*": "./dist/lib/utils/*.js",
+    "#lib/*": "./dist/lib/*.js",
+    "#root/*": "./dist/*.js"
+  },
+  "dependencies": {
+    "@sapphire/async-queue": "^1.5.0",
+    "@sapphire/framework": "^5.0.5",
+    "@sapphire/plugin-logger": "^3.0.7",
+    "@typegoose/auto-increment": "^4.0.0",
+    "@types/node-cron": "^3.0.11",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@sapphire/decorators": "^6.0.2",
+    "@sapphire/eslint-config": "^5.0.2",
+    "@sapphire/ts-config": "^5.0.0",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.1.6"
+  }
+}

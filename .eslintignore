@@ -1,0 +1,3 @@
+tests/
+vitest.config.ts
+ecosystem.config.cjs
